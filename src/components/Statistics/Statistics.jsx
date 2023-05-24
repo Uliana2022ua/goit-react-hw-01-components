@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
+import { getRandomColor } from './getRandomColor';
 
 
  const Statistics = ({ title, stats }) => (
@@ -11,6 +12,7 @@ import css from './Statistics.module.css';
         <li
           
           className={css.item}
+          style={{ backgroundColor: getRandomColor() }}
           key={stat.id}
         >
           <span className={css.label}>{stat.label}</span>
